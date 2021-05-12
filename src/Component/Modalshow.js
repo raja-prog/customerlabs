@@ -297,24 +297,32 @@ const params={
   }
 
     return (
-      <Modal.Dialog size=''>
+      <Modal.Dialog size='xl'>
       <Modal.Header>
         <Modal.Title>Saving Segement</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        <input value={segment} onChange={setSegmentname} type='text' placeholder='Segment name'>
+        <input
+        
+        style={
+          {
+           marginBottom:'10px'
+          }
+        }
+         value={segment} onChange={setSegmentname} type='text' placeholder='Segment name'>
         </input>
         {/* {
           box ?
         } */}
         {/* {fields[0].value!=='' ?  */}
           <div
-  //          style={
-  //   {
-  //    border: '2px solid blue'
-  //   }
-  // }
+           style={
+    {
+     border: '2px solid blue',
+     padding: '20px'
+    }
+  }
   > {fields.map((field, idx) => {
     console.log(fields[0].value,'opop')
     if(fields[idx].value!==''){
@@ -421,8 +429,11 @@ const params={
 <br/>
 <button style={
     {
-     border: '2px solid blue',
-     marginTop:'60px'
+    //  border: '2px solid blue',
+     marginTop:'60px',
+     border: '1px solid #3498db',
+      backgroundColor : 'transparent',
+      boxShadow: '0 6px 6px rgba(0, 0, 0, 0.6)'
     }}
  type="button" onClick={() => handleAdd()}>
         + Add new schema
